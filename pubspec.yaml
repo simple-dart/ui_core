@@ -1,0 +1,16 @@
+name: simple_dart_ui_core
+description: Core UI library
+version: 0.0.1
+repository: https://github.com/simple-dart/ui_core
+platforms:
+  web:
+
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+
+
+#dependencies:
+
+dev_dependencies:
+  build_runner: ^2.3.2
+  build_web_compilers:
