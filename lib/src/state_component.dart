@@ -1,4 +1,4 @@
-import '../ui_core.dart';
+import '../simple_dart_ui_core.dart';
 
 abstract class StateComponent<T> {
   String get varName;

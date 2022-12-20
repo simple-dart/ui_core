@@ -1,6 +1,6 @@
 import 'dart:html';
 
-import '../ui_core.dart';
+import '../simple_dart_ui_core.dart';
 
 enum Align { stretch, start, end, center }
 
