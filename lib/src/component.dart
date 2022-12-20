@@ -1,5 +1,7 @@
 import 'dart:html';
 
+import '../simple_dart_ui_core.dart';
+
 abstract class Component {
   Element get element;
 
@@ -8,6 +10,9 @@ abstract class Component {
   bool _fillContent = false;
   bool _breakWords = false;
   bool _shrinkable = false;
+  Align _vAlign = Align.start;
+  Align _hAlign = Align.stretch;
+  Align _textAlign = Align.start;
 
   Component(String className) {
     addCssClass(className);
@@ -86,7 +91,7 @@ abstract class Component {
     if (_breakWords) {
       element.style.overflowWrap = 'anywhere';
     } else {
-      element.style.wordBreak = 'normal';
+      element.style.overflowWrap = 'normal';
     }
   }
 
@@ -104,6 +109,27 @@ abstract class Component {
   set padding(String padding) => element.style.padding = padding;
 
   String get padding => (element.style.padding.isEmpty) ? '0px' : element.style.padding;
+
+  Align get vAlign => _vAlign;
+
+  set vAlign(Align align) {
+    _vAlign = align;
+    element.style.alignItems = _vAlign.name;
+  }
+
+  Align get hAlign => _hAlign;
+
+  set hAlign(Align align) {
+    _hAlign = align;
+    element.style.justifyContent = _hAlign.name;
+  }
+
+  Align get textAlign => _textAlign;
+
+  set textAlign(Align value) {
+    _textAlign = value;
+    element.style.textAlign = _textAlign.name;
+  }
 
   void clearClasses() {
     element.classes.clear();

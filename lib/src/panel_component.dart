@@ -2,7 +2,6 @@ import 'dart:html';
 
 import '../simple_dart_ui_core.dart';
 
-enum Align { stretch, start, end, center }
 
 abstract class PanelComponent extends Component {
   final DivElement _element = DivElement();
@@ -130,77 +129,29 @@ abstract class PanelComponent extends Component {
     }
   }
 
+  @override
   Align get vAlign => _vAlign;
 
+  @override
   set vAlign(Align newValue) {
     _vAlign = newValue;
     if (!vertical) {
-      switch (_vAlign) {
-        case Align.stretch:
-          element.style.alignItems = 'stretch';
-          break;
-        case Align.start:
-          element.style.alignItems = 'flex-start';
-          break;
-        case Align.end:
-          element.style.alignItems = 'flex-end';
-          break;
-        case Align.center:
-          element.style.alignItems = 'center';
-          break;
-      }
+      element.style.alignItems = _vAlign.name;
     } else {
-      switch (_vAlign) {
-        case Align.stretch:
-          element.style.justifyContent = 'stretch';
-          break;
-        case Align.start:
-          element.style.justifyContent = 'flex-start';
-          break;
-        case Align.end:
-          element.style.justifyContent = 'flex-end';
-          break;
-        case Align.center:
-          element.style.justifyContent = 'center';
-          break;
-      }
+      element.style.justifyContent = _vAlign.name;
     }
   }
 
+  @override
   Align get hAlign => _hAlign;
 
+  @override
   set hAlign(Align newValue) {
     _hAlign = newValue;
     if (!vertical) {
-      switch (_hAlign) {
-        case Align.stretch:
-          element.style.justifyContent = 'stretch';
-          break;
-        case Align.start:
-          element.style.justifyContent = 'flex-start';
-          break;
-        case Align.end:
-          element.style.justifyContent = 'flex-end';
-          break;
-        case Align.center:
-          element.style.justifyContent = 'center';
-          break;
-      }
+      element.style.justifyContent = _hAlign.name;
     } else {
-      switch (_hAlign) {
-        case Align.stretch:
-          element.style.alignItems = 'stretch';
-          break;
-        case Align.start:
-          element.style.alignItems = 'flex-start';
-          break;
-        case Align.end:
-          element.style.alignItems = 'flex-end';
-          break;
-        case Align.center:
-          element.style.alignItems = 'center';
-          break;
-      }
+      element.style.alignItems = _hAlign.name;
     }
   }
 

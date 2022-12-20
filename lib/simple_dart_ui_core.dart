@@ -1,5 +1,6 @@
 library ui_core;
 
+export 'src/align.dart';
 export 'src/component.dart';
 export 'src/component_factory.dart';
 export 'src/events/value_change_event.dart';
