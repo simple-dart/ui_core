@@ -50,7 +50,6 @@ input:focus {
 
 option {
   box-sizing: border-box;
-  font: inherit;
   color: inherit;
 }
 

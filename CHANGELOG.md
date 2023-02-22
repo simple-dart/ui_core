@@ -1,3 +1,7 @@
+## 0.0.4
+
+- add DisplayPanel and ObjectDisplayPanelAdapter
+
 ## 0.0.3
 
 - add adapters
