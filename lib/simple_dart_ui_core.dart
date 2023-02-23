@@ -13,3 +13,4 @@ export 'src/object_renderer.dart';
 export 'src/panel.dart';
 export 'src/panel_component.dart';
 export 'src/state_component.dart';
+export 'src/string_renderer.dart';

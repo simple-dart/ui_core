@@ -1,3 +1,7 @@
+## 0.0.6
+
+- export stringRenderer
+
 ## 0.0.5
 
 - rename `DisplayPanel` to `ObjectRenderer`
