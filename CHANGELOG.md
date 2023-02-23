@@ -1,3 +1,7 @@
+## 0.0.5
+
+- rename `DisplayPanel` to `ObjectRenderer`
+
 ## 0.0.4
 
 - add DisplayPanel and ObjectDisplayPanelAdapter
